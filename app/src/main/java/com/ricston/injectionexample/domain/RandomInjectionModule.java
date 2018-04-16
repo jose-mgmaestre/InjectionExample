@@ -8,6 +8,8 @@ import com.ricston.injectionexample.domain.com.ricston.injectionexample.domain.b
 
 import java.util.Random;
 
+import javax.inject.Singleton;
+
 import dagger.Module;
 import dagger.Provides;
 

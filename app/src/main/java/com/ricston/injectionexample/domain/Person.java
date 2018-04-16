@@ -1,6 +1,7 @@
 package com.ricston.injectionexample.domain;
 
 import javax.inject.Inject;
+import javax.inject.Singleton;
 
 public class Person {
 
