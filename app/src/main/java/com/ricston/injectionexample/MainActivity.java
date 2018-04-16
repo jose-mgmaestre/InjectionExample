@@ -7,7 +7,6 @@ import android.widget.TextView;
 import com.ricston.injectionexample.domain.Body;
 import com.ricston.injectionexample.domain.DaggerDoctor;
 import com.ricston.injectionexample.domain.Doctor;
-import com.ricston.injectionexample.domain.com.ricston.injectionexample.domain.blood.Blood;
 
 public class MainActivity extends AppCompatActivity {
 

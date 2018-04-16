@@ -12,11 +12,11 @@ import dagger.Module;
 import dagger.Provides;
 
 @Module
-public class InjectionModule {
+public class RandomInjectionModule {
 
     private static Blood blood;
 
-    public InjectionModule() {
+    public RandomInjectionModule() {
     }
 
     @Provides
