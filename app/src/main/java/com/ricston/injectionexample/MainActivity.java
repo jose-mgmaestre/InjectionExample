@@ -15,25 +15,25 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Doctor doctor = DaggerDoctor.create();
 
-        Body body = createPerson().getBody();
-        Body body2 = createPerson().getBody();
+        Person person1 = doctor.getPerson();
+        Person person2 = doctor.getPerson();
+
         TextView personTV = findViewById(R.id.person_tv);
         TextView bloodTV = findViewById(R.id.blood_tv);
         String newLine = System.lineSeparator();
 
-        personTV.setText("First body of person 1: " + body + newLine
-                        + "Second body of person 2: " + body2);
+        personTV.setText("Person and body 1: " + person1 + newLine
+                            +person1.getBody() + newLine
+                        + "Person and body 2: " + person2 + newLine
+                        + person2.getBody());
 
-        String firstBlood = body.getBlood().getKindOfBlood();
-        String secondBlood = body2.getBlood().getKindOfBlood();
+        String firstBlood = person1.getBody().getBlood().getKindOfBlood();
+        String secondBlood = person2.getBody().getBlood().getKindOfBlood();
 
         bloodTV.setText("Kind of Blood of first body: " + firstBlood + newLine
                         + "Kind of Blood of second body: "  + secondBlood);
     }
 
-    private Person createPerson() {
-        Doctor doctor = DaggerDoctor.create();
-        return doctor.getPerson();
-    }
 }

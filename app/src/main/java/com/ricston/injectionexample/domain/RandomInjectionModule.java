@@ -20,7 +20,7 @@ public class RandomInjectionModule {
     }
 
     @Provides
-    static Blood provideBlood(){
+    public static Blood provideBlood(){
 
         if(blood != null) {
             return blood;
